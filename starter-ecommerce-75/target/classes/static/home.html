@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <script src="api.js"></script>
+    <script src="home.js"></script>
+    <script src="data saving.js"></script>
+    <title>Techno-Shop</title>
+</head>
+<body>
+    <div class="bg-danger text-white text-center py-1">
+        Follow to our newsletter and get - 30% OFF on your first order!
+        <a href="#" class="text-white fw-bold ms-1 text-decoration-underline">ShopNow</a>
+    </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+               <a class="navbar-brand"><b>E-commerce</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="create account.html">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="btn btn-danger ms-2">Shop</a>
+                        </li>
+                    </ul>
+                    
+                    <input class="form-control me-2" style="max-width: 220px;" placeholder="What are you looking for?">
+                    <i class="bi bi-search me-3"></i>
+                 <div id="userInfo">
+                <button class="btn ms-3">
+                 <a class="nav-link" href="user.html">
+                   <i class="bi bi-person fs-4"></i>
+                 </a>
+                </button>
+                <span id="usernameDisplay"></span>
+                <a href="log in.html" id="loginBtn" class="btn btn-danger">Log In</a>
+                <a class="btn btn-danger"  id="logoutBtn" style="display: none">Log Out</a>
+                </div>
+
+
+                <button class="btn btn-danger ms-3"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></button>
+                </div>             
+        </div>
+    </nav>
+
+
+
+    <div id="electronicsCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#electronicsCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+      
+       
+        <div class="carousel-inner" >
+          <div class="carousel-item active">
+            <img src="./carousel pictures/Computer home page.jpg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="./carousel pictures/headphones home page.jpg" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="./carousel pictures/iphone 14 home page.jpg" class="d-block w-100" alt="Slide 3">
+          </div>
+          <div class="carousel-item">
+            <img src="./carousel pictures/Tablet home page.jpg" class="d-block w-100" alt="Slide 4">
+          </div>
+          <div class="carousel-item">
+            <img src="./carousel pictures/Telephone home page.jpg" class="d-block w-100" alt="Slide 5">
+          </div>
+          <div class="carousel-item">
+            <img src="./carousel pictures/usb-c cable home page.jpg" class="d-block w-100" alt="Slide 6">
+          </div>
+        </div>
+      
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#electronicsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+
+
+
+
+
+      <div class="container py-5">
+        
+        <div class="mb-4">
+          <div class="d-flex align-items-center mb-2 ms-3">
+            <div class="bg-danger rounded-start " style="width:15px; height:25px;"></div>
+            <span class="text-danger fw-bold ms-2">Featured</span>
+          </div>
+          <h2 class="fw-bold ms-3">Shop Collection</h2>
+        </div>
+    
+        
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="p-3 position-relative">
+              <img src="Headphones.jpg" alt="Headband" class="img-fluid" style="height: 695px">
+              <div class="position-absolute bottom-0 start-0 w-100 px-3 py-2">
+                <h3 class="fw-bold ms-4">Headband</h3>
+                <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark fs-5 ms-4 mb-3 d-inline-block">Collection →</a>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="rounded p-3 position-relative">
+                  <img src="Wireless headphones.jpg" alt="Earbuds" class="img-fluid ">
+                  <div class="position-absolute bottom-0 start-0 w-100 px-3 py-2">
+                    <h3 class="fw-bold ms-4">Earbuds</h3>
+                    <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark fs-5 ms-4 mb-3 d-inline-block">Collection →</a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-12 mb-4">
+                <div class=" rounded p-3 position-relative">
+                  
+                  <img src="usb cabel.jpg" alt="Accesories" class="img-fluid">
+                  <div class="position-absolute bottom-0 start-0 w-100 px-3 py-2">
+                     <h3 class="fw-bold ms-4">Accesories</h3>
+                     <a href="shop.html" class="text-decoration-none text-dark border-bottom border-dark fs-5 ms-4 mb-3 d-inline-block">Collection →</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      
+      
+      <div class="container py-5">
+       
+        <div class="d-flex align-items-center mb-2">
+          <div class="bg-danger rounded-start me-2" style="width:15px; height:25px;"></div>
+          <p class="text-danger fw-bold mb-0">Featured</p>
+        </div>
+        <h2 class="fw-bold mb-4">Promotion</h2>
+    
+        
+        <div class="row g-0 bg-warning-subtle rounded overflow-hidden">
+          
+          <div class="col-md-6 bg-dark position-relative d-flex align-items-end justify-content-start" style="background-image: url('Man\ image.jpg'); background-size: cover; background-position: center; height: 400px;">
+            <div class="d-flex gap-2 m-3">
+            </div>
+          </div>
+    
+          
+          <div class="col-md-6 p-4">
+            <p class="text-primary fw-bold mb-1">PROMOTION</p>
+            <h3 class="fw-bold">Hurry up! 40% OFF</h3>
+            <p>Thousands of high tech are waiting for you</p>
+            <p class="mt-3 mb-1">Offer expires in:</p>
+    
+            
+            <div class="d-flex gap-3">
+              <div class="text-center">
+                <div class="bg-white p-2 rounded fw-bold" id="days">00</div>
+                <small class="text-muted">Days</small>
+              </div>
+              <div class="text-center">
+                <div class="bg-white p-2 rounded fw-bold" id="hours">00</div>
+                <small class="text-muted">Hours</small>
+              </div>
+              <div class="text-center">
+                <div class="bg-white p-2 rounded fw-bold" id="minutes">00</div>
+                <small class="text-muted">Minutes</small>
+              </div>
+              <div class="text-center">
+                <div class="bg-white p-2 rounded fw-bold" id="seconds">00</div>
+                <small class="text-muted">Seconds</small>
+              </div>
+            </div>
+    
+            <button class="btn btn-dark mt-4"><a class="nav-link" href="shop.html">Shop now</a></button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="container mt-4 py-3">
+
+
+        <div class="d-flex align-items-center ms-3 mb-2">
+          <div class="bg-danger rounded-start me-2" style="width:15px; height:25px;"></div>
+          <p class="text-danger fw-bold mb-0 ">Our Products</p>
+        </div>
+        <h2 class="fw-bold mb-4 ms-3">Special promotion</h2>
+          <div class="position-relative">
+               
+              <img src="purple iphone.jpg" class="img-fluid w-100" alt="iPhone">
+
+              
+            <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-5 ms-5 mt-4">
+              <h4 class="text-secondary mb-4">Pro.Beyond.</h4>
+    
+              <h1 class="display-3 lead mb-4">iPhone 14 <span class="fw-bold">Pro</span></h1>
+              <p class="lead fw-bold text-secondary mb-4">Created to change everything for the better. For everyone</p>
+              <a href="shop.html" class="btn btn-outline-light btn-lg  px-4 py-2 mb-5">Shop Now</a>
+           </div>
+         </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container py-5">
+  <h2 class="text-center text-danger fw-bold mb-5">Feedback Corner</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="bg-white p-4 rounded shadow-sm h-100">
+        <div class="text-danger fs-3 mb-2">❛❛</div>
+        <h5 class="text-danger fw-bold">Emily Wilson</h5>
+        <p class="mb-0 fw-bold">The customer experience was exceptional from start to finish. The website is user-friendly, the checkout process was smooth, and the clothes I ordered fit perfectly. I'm beyond satisfied!</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="bg-danger bg-opacity-25 p-4 rounded shadow-sm h-100">
+        <div class="text-danger fs-3 mb-2">❛❛</div>
+        <h5 class="text-danger fw-bold">Sarah Thompson</h5>
+        <p class="mb-0 fw-bold">I absolutely love the quality and style of the clothing I purchased from this website. Customer service was outstanding, and I received my order quickly. Highly recommended!</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="bg-white p-4 rounded shadow-sm h-100">
+        <div class="text-danger fs-3 mb-2">❛❛</div>
+        <h5 class="text-danger fw-bold">Olivia Martinez</h5>
+        <p class="mb-0 fw-bold">I had a great experience shopping on this website. The clothes I bought are fashionable and comfortable. Highly satisfied!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container py-5">
+
+  <div class="d-flex align-items-center mb-2">
+    <div class="bg-danger rounded-start me-2" style="width:15px; height:25px;"></div>
+    <p class="text-danger fw-bold mb-0">Our products</p>
+  </div>
+  <h2 class="fw-bold mb-4 mt-4">Explore Our Products</h2>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card h-100 text-center border-0">
+        <img src="watch and headphones.jpg" class="card-img-top" alt="Popular Products">
+        <div class="card-body">
+          <h5 class="card-title">Popular Products</h5>
+          <p class="card-text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+          <a href="shop.html" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center border-0">
+        <img src="ipad.jpg" class="card-img-top" alt="iPad Pro">
+        <div class="card-body">
+          <h5 class="card-title">Ipad Pro</h5>
+          <p class="card-text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+          <a href="shop.html" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center border-0">
+        <img src="samsung.jpg" class="card-img-top" alt="Samsung Galaxy">
+        <div class="card-body">
+          <h5 class="card-title">Samsung Galaxy</h5>
+          <p class="card-text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+          <a href="shop.html" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card h-100 text-center border-0">
+        <img src="Macbook 1.jpg" class="card-img-top" alt="Macbook Pro">
+        <div class="card-body">
+          <h5 class="card-title">Macbook Pro</h5>
+          <p class="card-text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</p>
+          <a href="shop.html" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+      <footer class="footer bg-danger text-white pt-5">
+        <div class="container">
+          <div class="row gy-4">
+            
+
+            <div class="col-md-3">
+              <h5 class="fw-bold">Exclusive</h5>
+              <p>Subscribe</p>
+              <p>Get 10% off your first order</p>
+              <div class="d-flex">
+                <input type="email" class="form-control sub-input me-2" placeholder="Enter your email">
+                <button class="btn btn-outline-light">&rarr;</button>
+              </div>
+            </div>
+           
+
+            <div class="col-md-2">
+              <h5 class="fw-bold">Support</h5><br>
+              <p class="mb-1">111 Bijoy Sarani,Dhaka,</p>
+              <p class="mb-1">DH 1515, Bangladesh</p><br>
+              <p class="mb-1">exclusive@gmail.com</p><br>
+              <p>+88015-88888-9999</p><br>
+            </div>
+            
+
+            <div class="col-md-2">
+              <h5 class="fw-bold">Account</h5><br>
+              <ul class="list-unstyled">
+                <li><p>My Account</p></li>
+                <li><p>Login / Register</p></li>
+                <li><p>Cart</p></li>
+                <li><p>Wishlist</p></li>
+                <li><p>Shop</p></li>
+              </ul>
+            </div>
+           
+
+            <div class="col-md-2">
+              <h5 class="fw-bold">Quick Link</h5><br>
+              <ul class="list-unstyled">
+                <li><p>Privacy Policy</p></li>
+                <li><p>Terms Of Use</p></li>
+                <li><p>FAQ</p></li>
+                <li><p>Contact</p></li>
+              </ul>
+            </div>
+           
+
+            <div class="col-md-3">
+              <h5 class="fw-bold">Download App</h5>
+              <p>Save 25% off on your first order</p>
+              <img src="./footer images/My_QR_Code_1-512.png" alt="QR Code" class="img-fluid mb-2" style="max-width: 100px;">
+              <div class="d-flex gap-2">
+                <img src="./footer images/google play logo.svg" alt="Google Play" class="img-fluid" style="max-width: 120px;">
+                <img src="./footer images/app store logo.svg" alt="App Store" class="img-fluid" style="max-width: 120px;">
+              </div>
+              <div class="mt-3 d-flex gap-3 fs-4">
+                <a href="#"><i class="bi bi-facebook text-white"></i></a>
+                <a href="#"><i class="bi bi-twitter text-white"></i></a>
+                <a href="#"><i class="bi bi-instagram text-white"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+              </div>
+            </div>
+          </div>
+          <hr class="mt-4 border-light">
+          <p class="text-center mb-0">&copy; Beauty Shop | Privacy Policy</p>
+        </div>
+      </footer>
+
+
+
+</body>
+</html>
