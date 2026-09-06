@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+    <script src="api.js"></script>
+    <script src="log in.js"></script>
+    <script src="data saving.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="bg-danger text-white text-center py-1">
+        Follow to our newsletter and get - 30% OFF on your first order!
+        <a href="#" class="text-white fw-bold ms-1 text-decoration-underline">ShopNow</a>
+    </div>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+               <a class="navbar-brand"><b>E-commerce</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="create account.html">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="shop.html" class="btn btn-danger ms-2">Shop</a>
+                        </li>
+                    </ul>
+                    
+                    <input class="form-control me-2" style="max-width: 220px;" placeholder="What are you looking for?">
+                    <i class="bi bi-search me-3"></i>
+                 <div id="userInfo">
+                <button class="btn ms-3">
+                 <a class="nav-link" href="user.html">
+                   <i class="bi bi-person fs-4"></i>
+                 </a>
+                </button>
+                <span id="usernameDisplay"></span>
+                <a href="log in.html" id="loginBtn" class="btn btn-danger">Log In</a>
+                <a class="btn btn-danger"  id="logoutBtn" style="display: none">Log Out</a>
+                </div>
+
+
+                <button class="btn btn-danger ms-3"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></button>
+                </div>             
+        </div>
+    </nav>
+
+
+
+
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <div class="col-sm-4"></div>
+
+              <div class="col-sm-4">
+                <h2 class="text-center">Log in  <i class="bi bi-person fs-4"></i></h2>
+                
+
+                <div 
+                class="alert alert-danger"
+                id="login-error-alert"
+                style="display: none"
+                ></div>
+
+                <div 
+                class="alert alert-success"
+                id="login-success-alert"
+                style="display: none"
+                ></div>
+
+                <form action="" class="needs-validation" novalidate onsubmit="onLogin(event)">
+                 <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" class="form-control" id="username" required minlength="3" maxlength="30"/>
+                    <div class="valid-feedback">Correct</div>
+                    <div class="invalid-feedback">
+                        Enter a username between 3 and 30 characters.
+                    </div>
+                 </div>
+
+
+                 <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" required maxlength="100"/>
+                    <div class="valid-feedback">Correct</div>
+                    <div class="invalid-feedback">
+                        Enter your password.
+                    </div>
+                 </div>
+
+
+                 <br>
+                 <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-danger col-6">Log in</button>
+                </div>
+                 <div class="text-center mt-3">
+                  <span>Don't have an account?</span>
+                  <a href="create account.html" class="text-danger text-decoration-none fw-semibold ">Create an account</a>
+                 </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="footer bg-danger text-white pt-5">
+      <div class="container">
+        <div class="row gy-4">
+          
+
+          <div class="col-md-3">
+            <h5 class="fw-bold">Exclusive</h5>
+            <p>Subscribe</p>
+            <p>Get 10% off your first order</p>
+            <div class="d-flex">
+              <input type="email" class="form-control sub-input me-2" placeholder="Enter your email">
+              <button class="btn btn-outline-light">&rarr;</button>
+            </div>
+          </div>
+         
+
+          <div class="col-md-2">
+            <h5 class="fw-bold">Support</h5><br>
+            <p class="mb-1">111 Bijoy Sarani,Dhaka,</p>
+            <p class="mb-1">DH 1515, Bangladesh</p><br>
+            <p class="mb-1">exclusive@gmail.com</p><br>
+            <p>+88015-88888-9999</p><br>
+          </div>
+          
+
+          <div class="col-md-2">
+            <h5 class="fw-bold">Account</h5><br>
+            <ul class="list-unstyled">
+              <li><p>My Account</p></li>
+              <li><p>Login / Register</p></li>
+              <li><p>Cart</p></li>
+              <li><p>Wishlist</p></li>
+              <li><p>Shop</p></li>
+            </ul>
+          </div>
+         
+
+          <div class="col-md-2">
+            <h5 class="fw-bold">Quick Link</h5><br>
+            <ul class="list-unstyled">
+              <li><p>Privacy Policy</p></li>
+              <li><p>Terms Of Use</p></li>
+              <li><p>FAQ</p></li>
+              <li><p>Contact</p></li>
+            </ul>
+          </div>
+         
+
+          <div class="col-md-3">
+            <h5 class="fw-bold">Download App</h5>
+            <p>Save 25% off on your first order</p>
+            <img src="./footer images/My_QR_Code_1-512.png" alt="QR Code" class="img-fluid mb-2" style="max-width: 100px;">
+            <div class="d-flex gap-2">
+              <img src="./footer images/google play logo.svg" alt="Google Play" class="img-fluid" style="max-width: 120px;">
+              <img src="./footer images/app store logo.svg" alt="App Store" class="img-fluid" style="max-width: 120px;">
+            </div>
+            <div class="mt-3 d-flex gap-3 fs-4">
+              <a href="#"><i class="bi bi-facebook text-white"></i></a>
+              <a href="#"><i class="bi bi-twitter text-white"></i></a>
+              <a href="#"><i class="bi bi-instagram text-white"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-white"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="mt-4 border-light">
+        <p class="text-center mb-0">&copy; Beauty Shop | Privacy Policy</p>
+      </div>
+    </footer>
+</body>
+</html>
