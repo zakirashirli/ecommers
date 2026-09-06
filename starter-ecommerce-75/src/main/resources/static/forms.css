@@ -1,0 +1,20 @@
+body { background: #f7f8fc; color: #243047; }
+.navbar { background: #fff !important; border-bottom: 1px solid #e7eaf0; }
+.auth-layout { max-width: 540px; margin: 48px auto; }
+.auth-layout > .row { margin: 0; }
+.auth-layout > .row > .col-sm-4:empty { display: none; }
+.auth-layout > .row > .col-sm-4 { width: 100%; }
+.auth-layout > .row > .col-sm-4:not(:empty), .card { background: #fff; border: 1px solid #e7eaf0; border-radius: 20px; padding: clamp(20px, 4vw, 36px); box-shadow: 0 12px 36px #2430470a; }
+h2 { font-weight: 700; letter-spacing: -.03em; }
+.form-intro { color: #657086; text-align: center; margin-bottom: 28px; }
+.form-group { margin-bottom: 18px; }
+label { font-weight: 600; font-size: .9rem; margin-bottom: 7px; }
+.form-control, .form-select { border-radius: 10px; padding: 11px 13px; border-color: #d7dce5; }
+.form-control:focus, .form-select:focus { border-color: #b52b3a; box-shadow: 0 0 0 3px #b52b3a20; }
+.btn-danger { --bs-btn-bg: #b52b3a; --bs-btn-border-color: #b52b3a; --bs-btn-hover-bg: #972332; --bs-btn-hover-border-color: #972332; border-radius: 10px; }
+form button[type="submit"] { min-height: 46px; }
+.auth-layout button[type="submit"] { width: 100%; }
+.was-validated .valid-feedback { display: none; }
+.form-status { clear: both; margin-top: 16px; }
+.footer { margin-top: 48px; }
+@media (max-width: 575px) { .auth-layout { margin: 28px auto; } .card { padding: 12px; } }
