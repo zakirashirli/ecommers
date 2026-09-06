@@ -10,8 +10,8 @@ h2 { font-weight: 700; letter-spacing: -.03em; }
 .form-group { margin-bottom: 18px; }
 label { font-weight: 600; font-size: .9rem; margin-bottom: 7px; }
 .form-control, .form-select { border-radius: 10px; padding: 11px 13px; border-color: #d7dce5; }
-.form-control:focus, .form-select:focus { border-color: #b52b3a; box-shadow: 0 0 0 3px #b52b3a20; }
-.btn-danger { --bs-btn-bg: #b52b3a; --bs-btn-border-color: #b52b3a; --bs-btn-hover-bg: #972332; --bs-btn-hover-border-color: #972332; border-radius: 10px; }
+.form-control:focus, .form-select:focus { border-color: var(--store-navy); box-shadow: 0 0 0 3px rgb(3 3 35 / 15%); }
+.btn-danger { --bs-btn-bg: var(--store-navy); --bs-btn-border-color: var(--store-navy); --bs-btn-hover-bg: var(--store-navy-hover); --bs-btn-hover-border-color: var(--store-navy-hover); border-radius: 10px; }
 form button[type="submit"] { min-height: 46px; }
 .auth-layout button[type="submit"] { width: 100%; }
 .was-validated .valid-feedback { display: none; }
