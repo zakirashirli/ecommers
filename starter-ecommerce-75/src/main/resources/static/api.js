@@ -9,9 +9,22 @@ const StoreApi = {
     const response = await fetch(path, { ...options, headers });
     if (response.status === 401 && !options.publicRequest) this.logout();
     if (!response.ok) {
-      let message = 'Request failed';
-      try { const body = await response.json(); message = body.message || message; } catch (_) { message = (await response.text()) || message; }
-      throw new Error(message);
+      const messages = {
+        401: 'Your session has expired. Please log in again.',
+        403: 'Access denied. Please log in with an account allowed to perform this action.',
+        404: 'The requested item could not be found.'
+      };
+      let message = messages[response.status] || 'Request failed (HTTP ' + response.status + '). Please try again.';
+      const text = await response.text();
+      try {
+        const body = JSON.parse(text);
+        if (typeof body.message === 'string' && body.message.trim()) message = body.message;
+      } catch (_) {
+        if (text && !text.trim().startsWith('<')) message = text;
+      }
+      const error = new Error(message);
+      error.status = response.status;
+      throw error;
     }
     if (response.status === 204) return null;
     const type = response.headers.get('content-type') || '';

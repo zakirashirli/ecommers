@@ -1,0 +1,69 @@
+/* Olive and cream palette with restrained storefront refinements. */
+:root {
+  --store-olive: #5e6650;
+  --store-olive-hover: #4c543f;
+  --store-cream: #f7f4eb;
+  --store-ink: #343a2e;
+  --bs-link-color: var(--store-olive);
+  --bs-link-hover-color: var(--store-olive-hover);
+}
+body { background: var(--store-cream); color: var(--store-ink); line-height: 1.6; }
+.bg-danger, .navbar.bg-dark { background-color: var(--store-olive) !important; }
+.bg-danger.text-white, .footer.text-white { color: var(--store-cream) !important; }
+.text-danger { color: var(--store-olive) !important; }
+.border-danger { border-color: var(--store-olive) !important; }
+.btn-danger {
+  --bs-btn-color: var(--store-cream);
+  --bs-btn-bg: var(--store-olive);
+  --bs-btn-border-color: var(--store-olive);
+  --bs-btn-hover-color: var(--store-cream);
+  --bs-btn-hover-bg: var(--store-olive-hover);
+  --bs-btn-hover-border-color: var(--store-olive-hover);
+  --bs-btn-active-color: var(--store-cream);
+  --bs-btn-active-bg: #424a36;
+  --bs-btn-active-border-color: #424a36;
+  --bs-btn-disabled-color: var(--store-cream);
+  --bs-btn-disabled-bg: var(--store-olive);
+  --bs-btn-disabled-border-color: var(--store-olive);
+  --bs-btn-focus-shadow-rgb: 94, 102, 80;
+}
+.btn-outline-danger {
+  --bs-btn-color: var(--store-olive);
+  --bs-btn-border-color: var(--store-olive);
+  --bs-btn-hover-color: var(--store-cream);
+  --bs-btn-hover-bg: var(--store-olive);
+  --bs-btn-hover-border-color: var(--store-olive);
+  --bs-btn-active-color: var(--store-cream);
+  --bs-btn-active-bg: var(--store-olive-hover);
+  --bs-btn-active-border-color: var(--store-olive-hover);
+  --bs-btn-disabled-color: var(--store-olive);
+  --bs-btn-disabled-border-color: var(--store-olive);
+  --bs-btn-focus-shadow-rgb: 94, 102, 80;
+}
+.navbar.bg-light { background: var(--store-cream) !important; border-bottom: 1px solid #dedfd3; }
+.navbar-brand { font-size: 1.2rem; }
+.btn { border-radius: 8px; }
+.btn:not(.btn-sm) { padding: .5rem .9rem; }
+h1, h2, h3 { letter-spacing: -.02em; line-height: 1.25; }
+h2 { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.card { border-color: #dedfd3; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgb(52 58 46 / 5%); }
+.card-body { padding: 1.25rem; }
+.form-control, .form-select { border-color: #cfd2c3; border-radius: 8px; padding: .6rem .75rem; }
+.form-control:focus, .form-select:focus { border-color: var(--store-olive); box-shadow: 0 0 0 3px rgb(94 102 80 / 18%); }
+.form-check-input:checked { background-color: var(--store-olive); border-color: var(--store-olive); }
+#electronicsCarousel { overflow: hidden; }
+#electronicsCarousel .carousel-item img { height: clamp(220px, 38vw, 470px); object-fit: contain; background: #fff; }
+.collection-feature { height: auto; max-height: 560px; width: 100%; object-fit: contain; }
+#productList .card-img-top { padding: 12px; }
+.account-layout { max-width: 520px; margin: 40px auto; }
+.account-layout > .row { margin: 0; }
+.account-layout > .row > .col-sm-4:empty { display: none; }
+.account-layout > .row > .col-sm-4:not(:empty) { width: 100%; background: #fff; padding: clamp(20px, 4vw, 30px); border: 1px solid #dedfd3; border-radius: 12px; }
+.account-layout .form-group { margin-top: 16px; }
+.account-layout label { margin-bottom: 5px; font-weight: 500; }
+.account-layout button[type="submit"] { width: 100%; }
+.footer { font-size: .925rem; }
+@media (max-width: 575px) { .account-layout { margin: 24px auto; } .collection-feature { max-height: 380px; } }
+
+#electronicsCarousel .carousel-control-prev-icon, #electronicsCarousel .carousel-control-next-icon { background-color: var(--store-olive); border: 6px solid var(--store-olive); border-radius: 50%; width: 38px; height: 38px; }
